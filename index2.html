@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Marketing Agent | Waitlist</title>
+    <meta
+      name="description"
+      content="AI Marketing Agent for marketers and brand managers. Join the waitlist for early access."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f8f8f3;
+        --surface: #ffffff;
+        --surface-soft: #f4f8f7;
+        --ink: #131311;
+        --muted: #595b53;
+        --line: #d7d9cf;
+        --brand: #de5d2a;
+        --brand-dark: #b5481d;
+        --accent: #0f7a68;
+        --shadow: 0 28px 70px rgba(18, 19, 16, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "DM Sans", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at 7% -8%,
+            rgba(222, 93, 42, 0.22),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 95% 2%,
+            rgba(15, 122, 104, 0.2),
+            transparent 36%
+          ),
+          var(--bg);
+        line-height: 1.56;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.06;
+        font-family: "Sora", "Avenir Next", sans-serif;
+      }
+
+      .wrap {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      .nav {
+        padding: 1.4rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        font-family: "Sora", "Avenir Next", sans-serif;
+        font-size: 1.02rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .nav-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #174f45;
+        background: rgba(15, 122, 104, 0.12);
+        border: 1px solid rgba(15, 122, 104, 0.3);
+        border-radius: 999px;
+        padding: 0.34rem 0.72rem;
+      }
+
+      .hero {
+        position: relative;
+        padding: clamp(1.5rem, 4vw, 3.2rem) 0 clamp(3rem, 7vw, 5rem);
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        gap: clamp(1.4rem, 3vw, 2.4rem);
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid #d4d7cb;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(6px);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #304036;
+      }
+
+      h1 {
+        margin-top: 1rem;
+        font-size: clamp(2.3rem, 6vw, 5.4rem);
+        letter-spacing: -0.02em;
+        max-width: 10.5em;
+      }
+
+      .line1,
+      .line2 {
+        display: block;
+      }
+
+      .line2 {
+        color: var(--brand);
+      }
+
+      .lead {
+        margin: 1.25rem 0 0;
+        font-size: clamp(1.03rem, 1.65vw, 1.3rem);
+        color: var(--muted);
+        max-width: 36ch;
+      }
+
+      .hero-actions {
+        margin-top: 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        appearance: none;
+        border: 0;
+        border-radius: 14px;
+        padding: 0.9rem 1.35rem;
+        background: var(--brand);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.97rem;
+        transition:
+          transform 180ms ease,
+          filter 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(0.94);
+      }
+
+      .helper {
+        margin: 0;
+        color: #3b4d45;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .hero-stack {
+        position: relative;
+        display: grid;
+        gap: 0.95rem;
+      }
+
+      .stack-card {
+        border: 1px solid rgba(206, 212, 199, 0.95);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.86);
+        backdrop-filter: blur(8px);
+        box-shadow: var(--shadow);
+        padding: 1.05rem 1.05rem 1rem;
+      }
+
+      .stack-card strong {
+        display: block;
+        font-family: "Sora", "Avenir Next", sans-serif;
+        font-size: 0.98rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .stack-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .stack-card:nth-child(1) {
+        transform: translateX(0);
+      }
+
+      .stack-card:nth-child(2) {
+        transform: translateX(-10px);
+      }
+
+      .stack-card:nth-child(3) {
+        transform: translateX(10px);
+      }
+
+      .section {
+        padding: clamp(2.8rem, 7vw, 5.8rem) 0;
+      }
+
+      .section h2 {
+        font-size: clamp(1.8rem, 3.9vw, 3rem);
+        letter-spacing: -0.015em;
+      }
+
+      .section-lead {
+        margin: 0.9rem 0 0;
+        max-width: 45ch;
+        font-size: clamp(1rem, 1.45vw, 1.15rem);
+        color: var(--muted);
+      }
+
+      .capabilities {
+        margin-top: 1.7rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .cap {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1.3rem;
+        min-height: 190px;
+      }
+
+      .cap .num {
+        display: inline-grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        background: #fff3ee;
+        border: 1px solid #f0b8a1;
+        color: #8e3516;
+        font-size: 0.88rem;
+        font-weight: 800;
+        margin-bottom: 0.85rem;
+      }
+
+      .cap h3 {
+        font-size: 1.08rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .cap p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .audience {
+        margin-top: 1.2rem;
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      .audience span {
+        border-radius: 999px;
+        border: 1px solid #ced3c5;
+        background: rgba(255, 255, 255, 0.78);
+        padding: 0.42rem 0.78rem;
+        font-size: 0.84rem;
+        font-weight: 700;
+        color: #3f4f45;
+      }
+
+      .waitlist-wrap {
+        margin-top: 1.25rem;
+        background:
+          linear-gradient(135deg, rgba(222, 93, 42, 0.12), transparent 48%),
+          linear-gradient(320deg, rgba(15, 122, 104, 0.14), transparent 53%),
+          #fff;
+        border: 1px solid #d8ddd0;
+        border-radius: 22px;
+        padding: clamp(1.3rem, 3vw, 2.1rem);
+        box-shadow: 0 26px 60px rgba(17, 18, 15, 0.1);
+      }
+
+      .waitlist-wrap h2 {
+        font-size: clamp(1.75rem, 4vw, 2.7rem);
+      }
+
+      .waitlist-copy {
+        margin: 0.7rem 0 0;
+        color: var(--muted);
+        max-width: 45ch;
+      }
+
+      form {
+        margin-top: 1.2rem;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.72rem;
+      }
+
+      label {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+
+      input,
+      button {
+        font: inherit;
+        border-radius: 12px;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid #bac2b2;
+        background: #fff;
+        padding: 0.85rem 0.92rem;
+        min-width: 0;
+      }
+
+      input:focus {
+        outline: 2px solid rgba(15, 122, 104, 0.2);
+        border-color: #8fb5ad;
+      }
+
+      button {
+        border: 0;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 800;
+        padding: 0.86rem 1.3rem;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+          transform 180ms ease,
+          filter 180ms ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        filter: brightness(0.94);
+      }
+
+      .note {
+        margin: 0.7rem 0 0;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .message {
+        margin: 0.72rem 0 0;
+        font-size: 0.93rem;
+        font-weight: 700;
+      }
+
+      .footer {
+        padding: 1.1rem 0 2rem;
+        color: #5a5e55;
+        font-size: 0.9rem;
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: fade-up 700ms cubic-bezier(0.2, 0.75, 0.1, 1) forwards;
+      }
+
+      .d1 {
+        animation-delay: 70ms;
+      }
+
+      .d2 {
+        animation-delay: 160ms;
+      }
+
+      .d3 {
+        animation-delay: 240ms;
+      }
+
+      .d4 {
+        animation-delay: 330ms;
+      }
+
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes fade-up {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+
+        .hero-stack {
+          max-width: 680px;
+        }
+
+        .capabilities {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 2.5rem 0;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav {
+          padding: 1.1rem 0;
+        }
+
+        .hero-actions {
+          align-items: flex-start;
+        }
+
+        .row {
+          grid-template-columns: 1fr;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        .stack-card:nth-child(2),
+        .stack-card:nth-child(3) {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap nav">
+      <div class="brand">MARKETING AGENT LAB</div>
+      <div class="nav-chip">Early waitlist</div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <span class="eyebrow fade-up"
+            >Built for marketers and brand managers</span
+          >
+          <h1 class="fade-up d1">
+            <span class="line1">You do not need AI Agent.</span>
+            <span class="line2">You need AI "Marketing" Agent</span>
+          </h1>
+          <p class="lead fade-up d2">
+            One agent for research, benchmarking, and content drafting. Fewer
+            manual tasks, faster execution, cleaner marketing decisions.
+          </p>
+          <div class="hero-actions fade-up d3">
+            <a class="btn" href="#waitlist">Join Waitlist</a>
+            <p class="helper">Email only signup. No spam.</p>
+          </div>
+        </div>
+
+        <aside class="hero-stack" aria-label="Example marketing workflows">
+          <article class="stack-card fade-up d2 float">
+            <strong>YouTube Analysis</strong>
+            <p>
+              Surface repeating hooks, audience pains, and winning message
+              angles.
+            </p>
+          </article>
+          <article class="stack-card fade-up d3">
+            <strong>Competitor Benchmarking</strong>
+            <p>
+              Map what competitors launch, how they position, and what gets
+              traction.
+            </p>
+          </article>
+          <article class="stack-card fade-up d4 float">
+            <strong>Social Draft Generator</strong>
+            <p>
+              Create channel-ready post drafts aligned to campaign objective and
+              tone.
+            </p>
+          </article>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2 class="fade-up">What this agent handles daily</h2>
+        <p class="section-lead fade-up d1">
+          Practical workflows for growth teams who need output, not another
+          analytics dashboard.
+        </p>
+
+        <div class="capabilities">
+          <article class="cap fade-up d1">
+            <span class="num">01</span>
+            <h3>Research</h3>
+            <p>
+              Analyze marketing videos and customer language to reveal
+              trend-ready insights.
+            </p>
+          </article>
+          <article class="cap fade-up d2">
+            <span class="num">02</span>
+            <h3>Benchmark</h3>
+            <p>
+              Compare competitor campaigns and identify where your brand can
+              stand out.
+            </p>
+          </article>
+          <article class="cap fade-up d3">
+            <span class="num">03</span>
+            <h3>Draft</h3>
+            <p>
+              Generate social post drafts and campaign-first messaging faster.
+            </p>
+          </article>
+        </div>
+
+        <div class="audience fade-up d4" aria-label="Target users">
+          <span>Brand Managers</span>
+          <span>Growth Marketers</span>
+          <span>Content Leads</span>
+          <span>Agency Strategists</span>
+        </div>
+      </section>
+
+      <section class="section" id="waitlist">
+        <div class="waitlist-wrap fade-up d2">
+          <h2>Join the waitlist</h2>
+          <p class="waitlist-copy">
+            We are validating demand now. If this is useful for your team, drop
+            your email and get early access updates.
+          </p>
+
+          <form id="waitlist-form" novalidate>
+            <label for="email">Work email</label>
+            <div class="row">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@company.com"
+                required
+              />
+              <button type="submit">Get Early Access</button>
+            </div>
+            <p class="note">We only collect your email for waitlist updates.</p>
+            <p class="message" id="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      AI Marketing Agent for workflow automation across research, benchmark, and
+      social drafting.
+    </footer>
+
+    <script>
+      const form = document.getElementById("waitlist-form");
+      const message = document.getElementById("form-message");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+          message.textContent = "Please enter a valid email address.";
+          message.style.color = "#a13a1b";
+          form.reportValidity();
+          return;
+        }
+
+        const payload = Object.fromEntries(new FormData(form).entries());
+        const storageKey = "ai-marketing-agent-waitlist";
+        const existing = JSON.parse(localStorage.getItem(storageKey) || "[]");
+
+        existing.push({
+          ...payload,
+          submittedAt: new Date().toISOString(),
+        });
+
+        localStorage.setItem(storageKey, JSON.stringify(existing));
+
+        message.textContent = "You're on the waitlist. We'll contact you soon.";
+        message.style.color = "#176356";
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

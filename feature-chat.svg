@@ -1,0 +1,19 @@
+<svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="260" fill="#edf7f7" />
+  <!-- bubble user (left) -->
+  <rect x="72" y="52" width="160" height="52" rx="16" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <path d="M88 104 L80 118 L104 104 Z" fill="white" stroke="#dbe7ea" stroke-width="1.5" stroke-linejoin="round" />
+  <path d="M88 104 L102 104 L80 118 Z" fill="white" />
+  <rect x="90" y="68" width="96" height="7" rx="3.5" fill="#dbe7ea" />
+  <rect x="90" y="82" width="72" height="6" rx="3" fill="#f0f4f8" />
+  <!-- bubble AI (right) -->
+  <rect x="168" y="130" width="160" height="52" rx="16" fill="#1d3557" />
+  <path d="M312 182 L320 196 L296 182 Z" fill="#1d3557" />
+  <rect x="184" y="146" width="96" height="7" rx="3.5" fill="white" fill-opacity="0.25" />
+  <rect x="184" y="160" width="72" height="6" rx="3" fill="white" fill-opacity="0.15" />
+  <!-- typing dots bubble -->
+  <rect x="72" y="192" width="72" height="36" rx="14" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <circle cx="97" cy="210" r="4" fill="#a8dadc" />
+  <circle cx="108" cy="210" r="4" fill="#a8dadc" fill-opacity="0.6" />
+  <circle cx="119" cy="210" r="4" fill="#a8dadc" fill-opacity="0.3" />
+</svg>

@@ -1,0 +1,25 @@
+<svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="260" fill="#edf7f7" />
+  <!-- connecting lines -->
+  <line x1="200" y1="88" x2="120" y2="155" stroke="#dbe7ea" stroke-width="1.5" stroke-dasharray="4 3" />
+  <line x1="200" y1="88" x2="200" y2="155" stroke="#dbe7ea" stroke-width="1.5" stroke-dasharray="4 3" />
+  <line x1="200" y1="88" x2="280" y2="155" stroke="#dbe7ea" stroke-width="1.5" stroke-dasharray="4 3" />
+  <!-- center avatar (AI) -->
+  <circle cx="200" cy="76" r="28" fill="#1d3557" />
+  <text x="200" y="81" fill="white" font-size="12" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">AI</text>
+  <!-- member 1 -->
+  <circle cx="120" cy="168" r="22" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <circle cx="120" cy="163" r="7" fill="#a8dadc" />
+  <path d="M108 183 q12-9 24 0" fill="#a8dadc" />
+  <rect x="96" y="194" width="48" height="7" rx="3.5" fill="#dbe7ea" />
+  <!-- member 2 -->
+  <circle cx="200" cy="168" r="22" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <circle cx="200" cy="163" r="7" fill="#a8dadc" />
+  <path d="M188 183 q12-9 24 0" fill="#a8dadc" />
+  <rect x="176" y="194" width="48" height="7" rx="3.5" fill="#dbe7ea" />
+  <!-- member 3 -->
+  <circle cx="280" cy="168" r="22" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <circle cx="280" cy="163" r="7" fill="#a8dadc" />
+  <path d="M268 183 q12-9 24 0" fill="#a8dadc" />
+  <rect x="256" y="194" width="48" height="7" rx="3.5" fill="#dbe7ea" />
+</svg>

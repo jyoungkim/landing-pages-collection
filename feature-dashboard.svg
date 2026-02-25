@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="260" fill="#edf7f7" />
+  <!-- dashboard card -->
+  <rect x="80" y="40" width="240" height="180" rx="14" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <!-- header -->
+  <rect x="80" y="40" width="240" height="36" rx="14" fill="#f0f4f8" />
+  <rect x="80" y="56" width="240" height="20" fill="#f0f4f8" />
+  <circle cx="100" cy="58" r="6" fill="#a8dadc" />
+  <rect x="116" y="54" width="80" height="7" rx="3.5" fill="#dbe7ea" />
+  <!-- task rows -->
+  <!-- row 1 -->
+  <rect x="100" y="96" width="8" height="8" rx="2" fill="#a8dadc" />
+  <rect x="116" y="97" width="80" height="6" rx="3" fill="#1d3557" fill-opacity="0.15" />
+  <rect x="204" y="94" width="96" height="10" rx="5" fill="#f0f4f8" />
+  <rect x="204" y="94" width="76" height="10" rx="5" fill="#a8dadc" />
+  <text x="296" y="103" fill="#4b5563" font-size="9" font-family="system-ui,sans-serif" text-anchor="end">80%</text>
+  <!-- row 2 -->
+  <rect x="100" y="118" width="8" height="8" rx="2" fill="#a8dadc" />
+  <rect x="116" y="119" width="68" height="6" rx="3" fill="#1d3557" fill-opacity="0.15" />
+  <rect x="204" y="116" width="96" height="10" rx="5" fill="#f0f4f8" />
+  <rect x="204" y="116" width="52" height="10" rx="5" fill="#a8dadc" fill-opacity="0.6" />
+  <text x="296" y="125" fill="#4b5563" font-size="9" font-family="system-ui,sans-serif" text-anchor="end">54%</text>
+  <!-- row 3 -->
+  <rect x="100" y="140" width="8" height="8" rx="2" fill="#dbe7ea" />
+  <rect x="116" y="141" width="90" height="6" rx="3" fill="#1d3557" fill-opacity="0.1" />
+  <rect x="204" y="138" width="96" height="10" rx="5" fill="#f0f4f8" />
+  <rect x="204" y="138" width="24" height="10" rx="5" fill="#a8dadc" fill-opacity="0.4" />
+  <text x="296" y="147" fill="#4b5563" font-size="9" font-family="system-ui,sans-serif" text-anchor="end">25%</text>
+  <!-- divider -->
+  <line x1="100" y1="164" x2="300" y2="164" stroke="#dbe7ea" stroke-width="1" />
+  <!-- status dots -->
+  <circle cx="110" cy="182" r="5" fill="#a8dadc" />
+  <rect x="122" y="179" width="46" height="6" rx="3" fill="#dbe7ea" />
+  <circle cx="186" cy="182" r="5" fill="#fec02f" />
+  <rect x="198" y="179" width="40" height="6" rx="3" fill="#dbe7ea" />
+  <circle cx="254" cy="182" r="5" fill="#dbe7ea" />
+  <rect x="266" y="179" width="30" height="6" rx="3" fill="#dbe7ea" />
+</svg>

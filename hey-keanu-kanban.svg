@@ -1,0 +1,214 @@
+<svg
+  viewBox="0 0 680 420"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="AI agent managing a kanban board"
+>
+  <rect
+    x="12"
+    y="12"
+    width="656"
+    height="396"
+    rx="18"
+    fill="#FFFFFF"
+    stroke="#DBE7EA"
+  />
+  <rect
+    x="26"
+    y="26"
+    width="150"
+    height="368"
+    rx="12"
+    fill="#F8FCFD"
+    stroke="#DBE7EA"
+  />
+  <rect
+    x="188"
+    y="26"
+    width="150"
+    height="368"
+    rx="12"
+    fill="#F8FCFD"
+    stroke="#DBE7EA"
+  />
+  <rect
+    x="350"
+    y="26"
+    width="150"
+    height="368"
+    rx="12"
+    fill="#F8FCFD"
+    stroke="#DBE7EA"
+  />
+  <rect
+    x="512"
+    y="26"
+    width="142"
+    height="368"
+    rx="12"
+    fill="#F8FCFD"
+    stroke="#DBE7EA"
+  />
+
+  <text
+    x="40"
+    y="50"
+    fill="#4B5563"
+    font-size="14"
+    font-family="Manrope, sans-serif"
+  >
+    Backlog
+  </text>
+  <text
+    x="202"
+    y="50"
+    fill="#4B5563"
+    font-size="14"
+    font-family="Manrope, sans-serif"
+  >
+    Plan
+  </text>
+  <text
+    x="364"
+    y="50"
+    fill="#4B5563"
+    font-size="14"
+    font-family="Manrope, sans-serif"
+  >
+    Working
+  </text>
+  <text
+    x="526"
+    y="50"
+    fill="#4B5563"
+    font-size="14"
+    font-family="Manrope, sans-serif"
+  >
+    Done
+  </text>
+
+  <rect
+    x="40"
+    y="74"
+    width="122"
+    height="52"
+    rx="9"
+    fill="#FFFFFF"
+    stroke="#DBE7EA"
+  />
+  <text
+    x="50"
+    y="98"
+    fill="#111827"
+    font-size="12"
+    font-family="Manrope, sans-serif"
+  >
+    Launch page update
+  </text>
+
+  <rect
+    x="202"
+    y="74"
+    width="122"
+    height="68"
+    rx="9"
+    fill="#F3FBFB"
+    stroke="#A8DADC"
+  />
+  <text
+    x="212"
+    y="98"
+    fill="#111827"
+    font-size="12"
+    font-family="Manrope, sans-serif"
+  >
+    Draft sequence
+  </text>
+  <text
+    x="212"
+    y="116"
+    fill="#4B5563"
+    font-size="11"
+    font-family="Manrope, sans-serif"
+  >
+    Hey Keanu planning
+  </text>
+
+  <rect
+    x="364"
+    y="74"
+    width="122"
+    height="68"
+    rx="9"
+    fill="#F3FBFB"
+    stroke="#A8DADC"
+  />
+  <text
+    x="374"
+    y="98"
+    fill="#111827"
+    font-size="12"
+    font-family="Manrope, sans-serif"
+  >
+    Write copy set
+  </text>
+  <text
+    x="374"
+    y="116"
+    fill="#4B5563"
+    font-size="11"
+    font-family="Manrope, sans-serif"
+  >
+    Hey Keanu executing
+  </text>
+
+  <rect
+    x="526"
+    y="74"
+    width="112"
+    height="52"
+    rx="9"
+    fill="#FFFFFF"
+    stroke="#DBE7EA"
+  />
+  <text
+    x="536"
+    y="98"
+    fill="#111827"
+    font-size="12"
+    font-family="Manrope, sans-serif"
+  >
+    Report ready
+  </text>
+
+  <circle cx="312" cy="232" r="42" fill="#A8DADC" />
+  <text
+    x="288"
+    y="229"
+    fill="#1D3557"
+    font-size="11"
+    font-family="Manrope, sans-serif"
+  >
+    HEY KEANU
+  </text>
+  <text
+    x="287"
+    y="244"
+    fill="#1D3557"
+    font-size="11"
+    font-family="Manrope, sans-serif"
+  >
+    AGENT
+  </text>
+
+  <path d="M312 188V156" stroke="#1D3557" stroke-width="2" />
+  <path d="M312 276V314" stroke="#1D3557" stroke-width="2" />
+  <path d="M270 232H226" stroke="#1D3557" stroke-width="2" />
+  <path d="M354 232H398" stroke="#1D3557" stroke-width="2" />
+
+  <circle cx="312" cy="152" r="5" fill="#A8DADC" />
+  <circle cx="312" cy="318" r="5" fill="#A8DADC" />
+  <circle cx="222" cy="232" r="5" fill="#A8DADC" />
+  <circle cx="402" cy="232" r="5" fill="#A8DADC" />
+</svg>

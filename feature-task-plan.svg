@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="260" fill="#edf7f7" />
+  <!-- card -->
+  <rect x="100" y="34" width="200" height="192" rx="14" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+  <!-- header bar -->
+  <rect x="100" y="34" width="200" height="38" rx="14" fill="#1d3557" />
+  <rect x="100" y="52" width="200" height="20" fill="#1d3557" />
+  <text x="200" y="59" fill="white" font-size="11" font-family="system-ui,sans-serif" font-weight="600" text-anchor="middle">Task Plan</text>
+  <!-- row 1 checked -->
+  <rect x="120" y="88" width="14" height="14" rx="3" fill="#a8dadc" />
+  <path d="M123 95l3 3 5-6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="142" y="91" width="100" height="7" rx="3.5" fill="#dbe7ea" />
+  <!-- row 2 checked -->
+  <rect x="120" y="112" width="14" height="14" rx="3" fill="#a8dadc" />
+  <path d="M123 119l3 3 5-6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="142" y="115" width="80" height="7" rx="3.5" fill="#dbe7ea" />
+  <!-- row 3 empty -->
+  <rect x="120" y="136" width="14" height="14" rx="3" fill="none" stroke="#dbe7ea" stroke-width="1.5" />
+  <rect x="142" y="139" width="110" height="7" rx="3.5" fill="#f0f4f8" />
+  <!-- row 4 empty -->
+  <rect x="120" y="160" width="14" height="14" rx="3" fill="none" stroke="#dbe7ea" stroke-width="1.5" />
+  <rect x="142" y="163" width="90" height="7" rx="3.5" fill="#f0f4f8" />
+  <!-- badge -->
+  <rect x="120" y="190" width="72" height="22" rx="11" fill="#edf7f7" stroke="#a8dadc" stroke-width="1.2" />
+  <text x="156" y="205" fill="#0f766e" font-size="10" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">Planning…</text>
+</svg>
