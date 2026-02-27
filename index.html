@@ -3,27 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignalScout - AI Marketing Research</title>
-    <meta
-      name="description"
-      content="Join the waitlist for SignalScout, an AI marketing research app for category research and competitor analysis."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>HeyHeyHey - AI Marketing Agent</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap");
+
       :root {
-        --bg: #f3f1ea;
-        --paper: #fffdf9;
-        --ink: #18140f;
-        --muted: #5a544c;
-        --accent: #e85d3a;
-        --accent-2: #2f7f74;
-        --line: #dbd2c6;
-        --card: #f9f4eb;
+        --font-body: "Manrope", "Segoe UI", sans-serif;
+        --font-display: "Sora", "Segoe UI", sans-serif;
+        --bg: #ffffff;
+        --panel: #f8fcfd;
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #dbe7ea;
+        --accent: #1d3557;
+        --point: #a8dadc;
+        --point-soft: #edf7f7;
       }
 
       * {
@@ -32,131 +26,583 @@
 
       body {
         margin: 0;
-        font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+        font-family: var(--font-body);
         color: var(--ink);
-        background:
-          radial-gradient(circle at 15% 0%, #f7dccd 0%, transparent 28%),
-          radial-gradient(circle at 85% 10%, #dceeea 0%, transparent 35%),
-          var(--bg);
-        line-height: 1.45;
+        background: var(--bg);
       }
 
       .wrap {
-        width: min(1120px, 92vw);
+        width: min(1120px, calc(100% - 40px));
         margin: 0 auto;
       }
 
-      .topbar {
-        padding: 1.2rem 0;
+      .site-header {
+        padding: 24px 0 12px;
       }
 
       .brand {
-        font-family: "Space Grotesk", "Avenir Next", sans-serif;
-        font-size: 1.1rem;
+        display: inline-block;
         font-weight: 700;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.01em;
+        font-size: 18px;
       }
 
-      .hero {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 2.2rem;
-        padding: 1rem 0 2rem;
+      .brand span {
+        color: #457b9d;
+      }
+
+      .showcase-section {
+        padding: 28px 0 62px;
+      }
+
+      .showcase-card {
+        padding: 26px 0 0;
+      }
+
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 28px;
       }
 
-      h1,
-      h2,
-      h3 {
-        font-family: "Space Grotesk", "Avenir Next", sans-serif;
-        line-height: 1.05;
-        margin: 0;
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--point);
+        box-shadow: 0 0 0 6px rgba(168, 218, 220, 0.35);
       }
 
       h1 {
-        font-size: clamp(2.4rem, 5.2vw, 4.8rem);
-        margin-bottom: 1rem;
+        margin: 0 auto 40px;
+        font-family: var(--font-display);
+        font-size: clamp(42px, 6vw, 72px);
+        line-height: 0.98;
+        max-width: 980px;
       }
 
-      .subhead {
-        font-size: clamp(1rem, 1.5vw, 1.2rem);
+      .hero-copy {
+        text-align: center;
+        max-width: 980px;
+      }
+
+      .hero-copy .lead {
+        font-size: clamp(20px, 2.2vw, 21px);
         color: var(--muted);
-        max-width: 56ch;
+        margin: 0 auto 26px;
+        max-width: 610px;
       }
 
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.35rem 0.7rem;
-        border: 1px solid var(--line);
-        border-radius: 99px;
-        background: #fff6ef;
-        font-size: 0.82rem;
-        margin-bottom: 1rem;
+      .paintone {
+        background: linear-gradient(
+          to bottom,
+          transparent 55%,
+          rgba(234, 231, 13, 0.65) 55%
+        );
       }
 
-      .hero-card,
-      .card,
+      .painttwo {
+        background: linear-gradient(
+          to bottom,
+          transparent 55%,
+          rgba(168, 218, 220, 0.65) 55%
+        );
+      }
+
       .waitlist {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 18px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 460px;
+        margin: 0 auto;
       }
 
-      .hero-card {
-        padding: 1.2rem;
-        box-shadow: 0 20px 50px rgba(29, 22, 14, 0.08);
-      }
-
-      .hero-card h3 {
-        font-size: 1rem;
-        margin-bottom: 0.7rem;
-      }
-
-      .signal-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 0.55rem;
-      }
-
-      .signal-list li {
-        background: var(--card);
-        border: 1px dashed #d4c8ba;
+      input,
+      textarea,
+      select {
         border-radius: 12px;
-        padding: 0.65rem 0.7rem;
-        font-size: 0.95rem;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      input,
+      select {
+        height: 46px;
+        padding: 0 14px;
+      }
+
+      textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 14px;
+        resize: vertical;
+      }
+
+      .waitlist input {
+        min-width: 240px;
+        flex: 1;
+      }
+
+      button {
+        border: 0;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #f3fff8;
+        font: inherit;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        padding: 0 20px;
+        height: 46px;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.05);
+      }
+
+      .status {
+        margin-top: 12px;
+        color: #0f766e;
+        font-size: 14px;
+        display: none;
+        text-align: center;
+      }
+
+      .social-proof {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 14px;
+        width: 100%;
+      }
+
+      .avatar-stack {
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      .avatar-stack img {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        margin-left: -10px;
+        object-fit: cover;
+        position: relative;
+        background: #edf7f7;
+      }
+
+      .avatar-stack img:first-child {
+        margin-left: 0;
+      }
+
+      .avatar-stack img:nth-child(1) {
+        z-index: 5;
+      }
+      .avatar-stack img:nth-child(2) {
+        z-index: 4;
+      }
+      .avatar-stack img:nth-child(3) {
+        z-index: 3;
+      }
+      .avatar-stack img:nth-child(4) {
+        z-index: 2;
+      }
+      .avatar-stack img:nth-child(5) {
+        z-index: 1;
+      }
+
+      .social-proof span {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.3;
+      }
+
+      /* ── Browser mockup ── */
+      .browser-mock {
+        width: 100%;
+        max-width: 1120px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 48px rgba(17, 24, 39, 0.09);
+        background: #fff;
+      }
+
+      .browser-bar {
+        background: #f3f4f6;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .browser-dots {
+        display: flex;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+
+      .browser-dots span {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .browser-dots .dot-red {
+        background: #fc6058;
+      }
+      .browser-dots .dot-yellow {
+        background: #fec02f;
+      }
+      .browser-dots .dot-green {
+        background: #2aca44;
+      }
+
+      .browser-url {
+        flex: 1;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        overflow: hidden;
+      }
+
+      .browser-url .lock {
+        width: 10px;
+        height: 10px;
+        border: 1.5px solid #9ca3af;
+        border-radius: 2px;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .browser-url .lock::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 1px;
+        width: 6px;
+        height: 5px;
+        border: 1.5px solid #9ca3af;
+        border-radius: 3px 3px 0 0;
+        border-bottom: 0;
+      }
+
+      /* ── Kanban inside the browser ── */
+      .kanban-shell {
+        background: #f0f4f8;
+        padding: 18px 20px;
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        min-height: 320px;
+      }
+
+      .kanban-col {
+        flex: 0 0 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .kanban-col-header {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 0 4px 6px;
+        border-bottom: 2px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .col-count {
+        background: var(--line);
+        color: var(--muted);
+        border-radius: 99px;
+        font-size: 10px;
+        padding: 1px 6px;
+        font-weight: 600;
+      }
+
+      .k-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 12.5px;
+        color: var(--ink);
+        line-height: 1.4;
+        box-shadow: 0 1px 3px rgba(17, 24, 39, 0.04);
+      }
+
+      .k-card .k-tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        border-radius: 4px;
+        padding: 1px 6px;
+        margin-bottom: 5px;
+      }
+
+      .tag-ai {
+        background: #edf7f7;
+        color: #0f766e;
+      }
+
+      .tag-review {
+        background: #fef3c7;
+        color: #92400e;
+      }
+
+      .tag-done {
+        background: #dcfce7;
+        color: #15803d;
+      }
+
+      .k-card .k-meta {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .k-avatar {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--point);
+        display: grid;
+        place-items: center;
+        font-size: 9px;
+        font-weight: 700;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+
+      .k-avatar.ai {
+        background: var(--accent);
+        color: #fff;
+        font-size: 8px;
+      }
+
+      .k-progress {
+        margin-top: 6px;
+        height: 3px;
+        border-radius: 99px;
+        background: var(--line);
+        overflow: hidden;
+      }
+
+      .k-progress-fill {
+        height: 100%;
+        border-radius: 99px;
+        background: var(--point);
       }
 
       .section {
-        padding: 2.6rem 0;
+        padding: 62px 0;
+      }
+
+      .agent-section {
+        padding-top: 18px;
+      }
+
+      .agent-shell {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: radial-gradient(
+          circle at 15% 0%,
+          #eef9fa 0%,
+          #f8fcfd 42%,
+          #ffffff 100%
+        );
+        padding: 40px 32px;
+      }
+
+      .agent-kicker {
+        display: inline-block;
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--point);
+        border-color: var(--point);
+      }
+
+      .agent-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 32px;
+      }
+
+      .agent-intro .section-title {
+        margin-top: 16px;
+        margin-bottom: 0;
+      }
+
+      .chat-row {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .chat-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .chat-bubble {
+        flex: 1;
+        margin: 0;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 20px 20px 20px 4px;
+        padding: 16px 18px;
+        color: var(--ink);
+        font-size: 14.5px;
+        line-height: 1.5;
+        position: relative;
+        box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
+        transition:
+          box-shadow 0.25s,
+          transform 0.25s;
+      }
+
+      .chat-bubble:nth-child(2) {
+        border-radius: 20px 20px 4px 20px;
+      }
+
+      .chat-bubble:hover {
+        box-shadow: 0 6px 20px rgba(17, 24, 39, 0.08);
+        transform: translateY(-8px);
+      }
+
+      .chat-bubble::before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 14px;
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        transform: rotate(45deg);
+      }
+
+      .chat-bubble:nth-child(2)::before {
+        left: auto;
+        right: 14px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        border-right: 1px solid var(--line);
+      }
+
+      .agent-cta {
+        margin-top: 32px;
+        text-align: center;
+      }
+
+      .agent-cta .agent-cta-headline {
+        margin: 0 auto 8px;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: clamp(22px, 2.8vw, 30px);
+        font-weight: 700;
+        line-height: 1.35;
+        max-width: 640px;
+      }
+
+      .agent-cta .agent-cta-headline strong {
+        color: var(--accent);
+      }
+
+      .agent-cta .agent-cta-sub {
+        margin: 0 auto 22px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 560px;
+      }
+
+      .agent-cta .waitlist {
+        max-width: 420px;
       }
 
       .section-title {
-        font-size: clamp(1.6rem, 3vw, 2.3rem);
-        margin-bottom: 0.6rem;
+        font-family: var(--font-display);
+        font-size: clamp(30px, 3.6vw, 46px);
+        margin: 0 0 12px;
       }
 
-      .section-copy {
+      .centered-title {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .section-lead {
         color: var(--muted);
-        margin-top: 0;
-        max-width: 65ch;
+        max-width: 780px;
+        margin: 0 auto 28px;
+        text-align: center;
+        font-size: 22px;
       }
 
-      .grid {
+      .cards {
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
       }
 
       .card {
-        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 28px 26px;
+      }
+
+      .step {
+        display: inline-grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--point);
+        font-weight: 700;
+        margin-bottom: 12px;
       }
 
       .card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
+        margin: 0 0 8px;
+        font-size: 20px;
       }
 
       .card p {
@@ -164,481 +610,716 @@
         color: var(--muted);
       }
 
-      .waitlist {
-        background:
-          linear-gradient(140deg, rgba(232, 93, 58, 0.09), transparent 46%),
-          linear-gradient(320deg, rgba(47, 127, 116, 0.11), transparent 50%),
-          var(--paper);
-        padding: 1.25rem;
-      }
-
-      .waitlist h2 {
-        font-size: clamp(1.7rem, 3.2vw, 2.6rem);
-      }
-
-      .waitlist-grid {
-        margin-top: 1rem;
-        display: grid;
-        gap: 0.9rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      label {
+      .card img {
+        width: calc(100% + 52px);
+        margin: -28px -26px 18px;
+        border-radius: 18px 18px 0 0;
         display: block;
-        font-weight: 700;
-        font-size: 0.9rem;
-        margin-bottom: 0.4rem;
+        object-fit: cover;
       }
 
-      input,
-      select,
-      textarea,
-      button {
+      .card svg {
+        width: calc(100% + 52px);
+        margin: -28px -26px 20px;
+        border-radius: 17px 17px 0 0;
+        background: #f8fcfd;
+        display: block;
+      }
+
+      .feature-layout-list {
+        display: grid;
+        gap: 24px;
+      }
+
+      .feature-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .image-placeholder {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+        min-height: 260px;
+      }
+
+      .image-placeholder img {
         width: 100%;
-        border: 1px solid #bfb3a1;
-        border-radius: 12px;
-        padding: 0.75rem;
-        font: inherit;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .feature-content {
+        border-radius: 22px;
+        padding: 40px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .feature-title {
+        font-family: var(--font-display);
+        font-size: clamp(13px, 2.2vw, 42px);
+        line-height: 1.2;
+        margin: 0 0 14px;
         color: var(--ink);
-        background: #fffcf7;
       }
 
-      textarea {
-        min-height: 110px;
-        resize: vertical;
-      }
-
-      .full {
-        grid-column: 1 / -1;
-      }
-
-      button {
-        border: 0;
-        background: var(--accent);
-        color: white;
-        font-weight: 800;
-        cursor: pointer;
-        transition:
-          transform 120ms ease,
-          background 120ms ease;
-      }
-
-      button:hover {
-        background: #ca4d2e;
-        transform: translateY(-1px);
-      }
-
-      .note {
+      .feature-desc {
         margin: 0;
         color: var(--muted);
-        font-size: 0.88rem;
+        font-size: 24px;
+        line-height: 1.65;
       }
 
-      .message {
-        margin-top: 0.75rem;
-        font-weight: 700;
-        font-size: 0.95rem;
+      .final-cta {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 48px 40px;
+        text-align: center;
       }
 
       .footer {
-        padding: 1.2rem 0 2.8rem;
+        border-top: 1px solid var(--line);
+        padding: 28px 0 36px;
         color: var(--muted);
-        font-size: 0.9rem;
+        font-size: 14px;
       }
 
-      .howflow {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .how-step {
-        display: grid;
-        grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.15fr);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: var(--paper);
-        overflow: hidden;
-      }
-
-      .how-copy {
-        padding: 1rem;
-      }
-
-      .step-num {
-        width: 2.1rem;
-        height: 2.1rem;
-        display: grid;
-        place-items: center;
-        border-radius: 999px;
-        font-family: "Space Grotesk", "Avenir Next", sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 0.55rem;
-        border: 1px solid #cabca9;
-        background: #fff6eb;
-        color: #7e3a21;
-      }
-
-      .how-copy h3 {
-        font-size: 1.22rem;
-        margin: 0 0 0.4rem;
-      }
-
-      .how-copy p {
-        margin: 0;
-        color: var(--muted);
-        max-width: 34ch;
-      }
-
-      .how-visual {
-        padding: 0.9rem;
-        border-left: 1px solid var(--line);
-        background:
-          linear-gradient(125deg, rgba(232, 93, 58, 0.08), transparent 42%),
-          linear-gradient(300deg, rgba(47, 127, 116, 0.1), transparent 45%),
-          #fffcf7;
-      }
-
-      .visual-panel {
-        height: 100%;
-        min-height: 130px;
-        border: 1px solid #dacdbd;
-        border-radius: 12px;
-        background: #fffdf9;
-        padding: 0.75rem;
-      }
-
-      .search-input {
-        border: 1px solid #cbbca9;
-        border-radius: 10px;
-        padding: 0.6rem 0.7rem;
-        background: #fff7ef;
-        font-weight: 700;
-        font-size: 0.95rem;
-      }
-
-      .chip-row {
-        margin-top: 0.7rem;
+      .footer .wrap {
         display: flex;
-        gap: 0.4rem;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
 
-      .chip-row span {
-        display: inline-block;
-        border: 1px solid #d3c6b6;
-        border-radius: 999px;
-        padding: 0.24rem 0.55rem;
-        font-size: 0.78rem;
-        background: #fff;
-        color: #5f574c;
+      .footer a {
+        color: inherit;
+        text-decoration: none;
       }
 
-      .video-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.45rem;
-      }
-
-      .video {
-        height: 42px;
-        border-radius: 9px;
-        border: 1px solid #d8ccbd;
-        background: linear-gradient(155deg, #fbe8d7, #f7f0e6);
-        position: relative;
-      }
-
-      .video::after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 8px solid #8f4e2f;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .insight-list {
-        display: grid;
-        gap: 0.5rem;
-      }
-
-      .insight {
-        border: 1px solid #d8ccbd;
-        border-radius: 10px;
-        background: #fff;
-        padding: 0.45rem 0.5rem;
-      }
-
-      .insight b {
-        display: block;
-        font-size: 0.8rem;
-        margin-bottom: 0.2rem;
-      }
-
-      .meter {
-        height: 6px;
-        border-radius: 999px;
-        background: #e9dfd3;
-      }
-
-      .meter span {
-        display: block;
-        height: 100%;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #e85d3a, #2f7f74);
-      }
-
-      .fade-up {
-        opacity: 0;
-        transform: translateY(14px);
-        animation: fade-up 520ms ease forwards;
-      }
-
-      .d2 {
-        animation-delay: 120ms;
-      }
-
-      .d3 {
-        animation-delay: 220ms;
-      }
-
-      .d4 {
-        animation-delay: 320ms;
-      }
-
-      @keyframes fade-up {
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      @media (max-width: 940px) {
-        .hero {
-          grid-template-columns: 1fr;
+      @media (max-width: 980px) {
+        .showcase-card {
+          padding: 20px 0 0;
         }
 
-        .grid,
-        .waitlist-grid {
-          grid-template-columns: 1fr;
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
         }
 
-        .how-step {
+        .feature-layout {
           grid-template-columns: 1fr;
         }
+      }
 
-        .how-visual {
-          border-left: 0;
-          border-top: 1px solid var(--line);
+      @media (max-width: 680px) {
+        .agent-shell {
+          padding: 28px 18px;
+        }
+
+        .chat-row {
+          flex-direction: column;
+          gap: 12px;
+          margin-bottom: 12px;
+        }
+
+        .chat-bubble:nth-child(2) {
+          border-radius: 20px 20px 20px 4px;
+        }
+
+        .chat-bubble:nth-child(2)::before {
+          left: 14px;
+          right: auto;
+          border-left: none;
+          border-right: 1px solid var(--line);
+        }
+
+        .agent-cta p {
+          font-size: 15px;
+        }
+
+        .waitlist input {
+          min-width: 100%;
+        }
+
+        .feature-line {
+          font-size: 16px;
         }
       }
     </style>
   </head>
   <body>
-    <header class="topbar wrap">
-      <div class="brand">SignalScout</div>
+    <header class="site-header">
+      <div class="wrap">
+        <div class="brand">HeyHeyHey</div>
+      </div>
     </header>
 
-    <main class="wrap">
-      <section class="hero">
-        <div>
-          <span class="pill fade-up">Early Access - Waitlist Open</span>
-          <h1 class="fade-up d2">
-            Know what your market is saying before your competitors do.
-          </h1>
-          <p class="subhead fade-up d3">
-            SignalScout is an AI marketing research app that turns YouTube
-            conversations and competitor activity into clear category insights,
-            campaign signals, and actionable trends.
-          </p>
+    <main>
+      <section class="showcase-section">
+        <div class="wrap">
+          <div class="showcase-card">
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <h1>
+                  The AI marketing agent that doesn't just answer <br />
+                  <span class="painttwo">— it executes. </span>
+                </h1>
+                <p class="lead">
+                  HeyHeyHey is an AI marketing agent that lives in your
+                  workflow, <br />
+                  taking tasks from planning to execution and delivering outputs
+                  <br />
+                  you and your team can use right away.
+                </p>
+
+                <form class="waitlist" id="finalWaitlist">
+                  <input
+                    type="email"
+                    id="finalEmail"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                  <button type="submit">Join waitlist</button>
+                  <div class="social-proof">
+                    <div class="avatar-stack">
+                      <img
+                        src="https://api.dicebear.com/9.x/lorelei/svg?seed=Sarah"
+                        alt=""
+                      />
+                      <img
+                        src="https://api.dicebear.com/9.x/lorelei/svg?seed=James"
+                        alt=""
+                      />
+                      <img
+                        src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mia"
+                        alt=""
+                      />
+                      <img
+                        src="https://api.dicebear.com/9.x/lorelei/svg?seed=Alex"
+                        alt=""
+                      />
+                      <img
+                        src="https://api.dicebear.com/9.x/lorelei/svg?seed=Yuna"
+                        alt=""
+                      />
+                    </div>
+                    <span>285 marketers already joined</span>
+                  </div>
+                </form>
+                <div
+                  class="status"
+                  id="finalStatus"
+                  style="display: none"
+                ></div>
+              </div>
+              <!-- Browser mockup — swap for real recording when ready -->
+              <div class="browser-mock" id="workflow">
+                <!-- Browser chrome -->
+                <div class="browser-bar">
+                  <div class="browser-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                </div>
+
+                <!-- Kanban board -->
+                <div class="kanban-shell">
+                  <!-- Backlog -->
+                  <div class="kanban-col">
+                    <div class="kanban-col-header">
+                      Backlog <span class="col-count">3</span>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-review">Content</div>
+                      <br />
+                      Write onboarding email sequence
+                      <div class="k-meta">
+                        <div class="k-avatar">JY</div>
+                        You
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-review">Research</div>
+                      <br />
+                      Competitive analysis – Q2
+                      <div class="k-meta">
+                        <div class="k-avatar">JY</div>
+                        You
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-review">Design</div>
+                      <br />
+                      Landing page copy review
+                      <div class="k-meta">
+                        <div class="k-avatar">JY</div>
+                        You
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Plan -->
+                  <div class="kanban-col">
+                    <div class="kanban-col-header">
+                      Plan <span class="col-count">2</span>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-ai">⚡ AI Agent</div>
+                      <br />
+                      Draft blog post: AI in workflows
+                      <div class="k-progress">
+                        <div class="k-progress-fill" style="width: 30%"></div>
+                      </div>
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        Planning…
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-ai">⚡ AI Agent</div>
+                      <br />
+                      Summarise user interview notes
+                      <div class="k-progress">
+                        <div class="k-progress-fill" style="width: 15%"></div>
+                      </div>
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        Planning…
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Working -->
+                  <div class="kanban-col">
+                    <div class="kanban-col-header">
+                      Working <span class="col-count">2</span>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-ai">⚡ AI Agent</div>
+                      <br />
+                      Generate social media posts × 5
+                      <div class="k-progress">
+                        <div class="k-progress-fill" style="width: 72%"></div>
+                      </div>
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        72 % done
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-ai">⚡ AI Agent</div>
+                      <br />
+                      Build SEO keyword report
+                      <div class="k-progress">
+                        <div class="k-progress-fill" style="width: 55%"></div>
+                      </div>
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        55 % done
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Done -->
+                  <div class="kanban-col">
+                    <div class="kanban-col-header">
+                      Done <span class="col-count">3</span>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-done">✓ Done</div>
+                      <br />
+                      Rewrite FAQ page
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        Delivered
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-done">✓ Done</div>
+                      <br />
+                      Product changelog draft
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        Delivered
+                      </div>
+                    </div>
+                    <div class="k-card">
+                      <div class="k-tag tag-done">✓ Done</div>
+                      <br />
+                      Weekly digest newsletter
+                      <div class="k-meta">
+                        <div class="k-avatar ai">AI</div>
+                        Delivered
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /kanban-shell -->
+              </div>
+              <!-- /browser-mock -->
+            </div>
+          </div>
         </div>
-        <aside class="hero-card fade-up d4" aria-label="Example insights">
-          <h3>Example signal output</h3>
-          <ul class="signal-list">
-            <li>
-              <strong>Category:</strong> Electric vacuum - "quiet cleaning"
-              mentions up 38% this month.
-            </li>
-            <li>
-              <strong>Tension:</strong> Buyers want lightweight design, but fear
-              battery fade after 12 months.
-            </li>
-            <li>
-              <strong>Competitor move:</strong> Brand X shifted to creator
-              reviews over paid ads in last 3 weeks.
-            </li>
-          </ul>
-        </aside>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">Two focused research engines</h2>
-        <p class="section-copy">
-          Start broad with marketing research, then zoom into what matters most:
-          category-level content signals and competitor-level campaign
-          intelligence.
-        </p>
-        <div class="grid">
-          <article class="card">
-            <h3>1) Category Research</h3>
-            <p>
-              Submit a keyword like <em>body lotion</em>,
-              <em>electric vacuum</em>, or <em>toothpaste</em>. SignalScout
-              finds related YouTube videos, then uses LLM analysis to extract
-              recurring keywords, messages, trends, tensions, and customer
-              language patterns.
-            </p>
-          </article>
-          <article class="card">
-            <h3>2) Competitor Analysis</h3>
-            <p>
-              Submit one or more competitors. SignalScout tracks current moves
-              and campaigns, then maps public reactions so you can see what
-              people actually think and where your positioning can win.
-            </p>
-          </article>
+      <section class="section agent-section" id="agent-jobs">
+        <div class="wrap">
+          <div class="agent-shell">
+            <div class="agent-intro">
+              <span class="agent-kicker">AI Marketing Agent</span>
+              <h2 class="section-title">
+                Already asking AI chatbot to do these marketing tasks but not
+                satisfied with results?
+              </h2>
+            </div>
+            <div class="chat-bubbles">
+              <div class="chat-row">
+                <p class="chat-bubble">
+                  "Make a simple campaign brief for this product launch"
+                </p>
+                <p class="chat-bubble">
+                  "Analyze this YouTube video and give me key takeaways I can
+                  use for my product"
+                </p>
+              </div>
+              <div class="chat-row">
+                <p class="chat-bubble">
+                  "Write a welcome email sequence for new signups in SaaS tone"
+                </p>
+                <p class="chat-bubble">
+                  "Generate image ad creatives for Meta campaign"
+                </p>
+              </div>
+              <div class="chat-row">
+                <p class="chat-bubble">
+                  "Turn this webinar transcript into 6 LinkedIn posts and 1
+                  thread"
+                </p>
+                <p class="chat-bubble">
+                  "Summarize competitor campaigns and what messaging is
+                  working."
+                </p>
+              </div>
+              <div class="chat-row">
+                <p class="chat-bubble">
+                  "Analyze this week's numbers and tell me what to fix first"
+                </p>
+                <p class="chat-bubble">
+                  "Write draft contents for X and Facebook based on this blog
+                  post"
+                </p>
+              </div>
+            </div>
+
+            <div class="agent-cta">
+              <p class="agent-cta-headline">
+                Not your fault. AI chatbot wasn't built for marketing execution.
+                <strong>HeyHeyHey is.</strong>
+              </p>
+              <p class="agent-cta-sub">
+                Built for marketing and content teams that run on too many tools
+                and not enough hands.
+              </p>
+              <br />
+              <form class="waitlist" id="midWaitlist">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+                <button type="submit">Join waitlist</button>
+                <div class="social-proof">
+                  <div class="avatar-stack">
+                    <img
+                      src="https://api.dicebear.com/9.x/lorelei/svg?seed=Sarah"
+                      alt=""
+                    />
+                    <img
+                      src="https://api.dicebear.com/9.x/lorelei/svg?seed=James"
+                      alt=""
+                    />
+                    <img
+                      src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mia"
+                      alt=""
+                    />
+                    <img
+                      src="https://api.dicebear.com/9.x/lorelei/svg?seed=Alex"
+                      alt=""
+                    />
+                    <img
+                      src="https://api.dicebear.com/9.x/lorelei/svg?seed=Yuna"
+                      alt=""
+                    />
+                  </div>
+                  <span>285 marketers already joined</span>
+                </div>
+              </form>
+              <div class="status" id="midStatus" style="display: none"></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">How it works</h2>
-        <p class="section-copy">One keyword in, marketer-grade insight out.</p>
-        <div class="howflow">
-          <article class="how-step">
-            <div class="how-copy">
-              <div class="step-num">1</div>
-              <h3>Input a product category keyword</h3>
+      <section class="section" id="how">
+        <div class="wrap">
+          <h2 class="section-title centered-title">How it works</h2>
+          <div class="cards">
+            <article class="card">
+              <img
+                src="how-it-works-1.svg"
+                alt="Chat conversation illustration"
+              />
+              <span class="step">1</span>
+              <h3>Create a task — or get guide through Chat</h3>
               <p>
-                Enter one term like <em>body lotion</em> or
-                <em>electric vacuum</em> to define the research scope.
+                Type what you need done, or chat with the AI agent to shape the
+                right task. Whether you have a clear objective or just a rough
+                idea, the agent meets you where you are.
               </p>
-            </div>
-            <div class="how-visual" aria-hidden="true">
-              <div class="visual-panel">
-                <div class="search-input">electric vacuum</div>
-                <div class="chip-row">
-                  <span>category</span>
-                  <span>youtube scan</span>
-                  <span>market intent</span>
-                </div>
+            </article>
+            <article class="card">
+              <img
+                src="how-it-works-1.svg"
+                alt="Chat conversation illustration"
+              />
+              <span class="step">2</span>
+              <h3>Move it to Plan or Working — the agent takes over</h3>
+              <p>
+                Drag your task into <strong>Plan</strong> or
+                <strong>Working</strong> and the AI agent handles the rest. It
+                plans, executes, and delivers outputs.
+              </p>
+            </article>
+            <article class="card">
+              <img
+                src="how-it-works-1.svg"
+                alt="Delivered outputs illustration"
+              />
+              <span class="step">3</span>
+              <h3>Outputs delivered, ready to use</h3>
+              <p>
+                When the task is done, the agent delivers finished outputs with
+                proper structures that you and your team can use right away.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fit">
+        <div class="wrap">
+          <div class="feature-layout-list">
+            <!-- 1 -->
+            <div class="feature-layout">
+              <div class="image-placeholder">
+                <img
+                  src="feature-task-plan.svg"
+                  alt="Task plan checklist illustration"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">AI Agent starts with planning</h3>
+                <p class="feature-desc">
+                  Working is easy with a solid plan. See exactly what the agent
+                  plans to do before it starts — no black boxes.
+                </p>
               </div>
             </div>
-          </article>
-          <article class="how-step">
-            <div class="how-copy">
-              <div class="step-num">2</div>
-              <h3>AI fetches related YouTube videos</h3>
-              <p>
-                The system collects videos linked to the keyword, from reviews
-                to creator comparisons and audience-led content.
-              </p>
-            </div>
-            <div class="how-visual" aria-hidden="true">
-              <div class="visual-panel video-grid">
-                <div class="video"></div>
-                <div class="video"></div>
-                <div class="video"></div>
-                <div class="video"></div>
-                <div class="video"></div>
-                <div class="video"></div>
+
+            <!-- 6 -->
+            <div class="feature-layout">
+              <div class="image-placeholder">
+                <img
+                  src="feature-chat.svg"
+                  alt="Chat conversation illustration"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Chat help, always on standby</h3>
+                <p class="feature-desc">
+                  Ask questions, give direction, or check in at any point. The
+                  agent listens and adjusts without losing its place.
+                </p>
               </div>
             </div>
-          </article>
-          <article class="how-step">
-            <div class="how-copy">
-              <div class="step-num">3</div>
-              <h3>AI analyzes with a marketer lens</h3>
-              <p>
-                SignalScout turns video content into key insights: themes,
-                tensions, message angles, and trend signals for brand decisions.
-              </p>
-            </div>
-            <div class="how-visual" aria-hidden="true">
-              <div class="visual-panel insight-list">
-                <div class="insight">
-                  <b>Trend: convenience messaging</b>
-                  <div class="meter"><span style="width: 78%"></span></div>
-                </div>
-                <div class="insight">
-                  <b>Tension: price vs durability</b>
-                  <div class="meter"><span style="width: 65%"></span></div>
-                </div>
-                <div class="insight">
-                  <b>Message gap: \"low noise\" proof</b>
-                  <div class="meter"><span style="width: 52%"></span></div>
-                </div>
+
+            <!-- 5 -->
+            <div class="feature-layout">
+              <div class="image-placeholder">
+                <img
+                  src="feature-team.svg"
+                  alt="AI connected to team members illustration"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Built for teams, not just solo</h3>
+                <p class="feature-desc">
+                  Create tasks in a shared workspace, refine them together,
+                  review agent outputs collaboratively, and keep every execution
+                  visible to the whole team.
+                </p>
               </div>
             </div>
-          </article>
+
+            <!-- 3 -->
+            <div class="feature-layout">
+              <div class="image-placeholder">
+                <img
+                  src="feature-delivered.svg"
+                  alt="Delivered document illustration"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Outputs ready to use right away</h3>
+                <p class="feature-desc">
+                  Each task generates outputs such as markdown file, csv, slide
+                  or image you and your team can use immediately.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="feature-layout">
+              <div class="image-placeholder">
+                <img
+                  src="feature-plan-to-working.svg"
+                  alt="Plan to Working kanban columns illustration"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Schedule repeated tasks</h3>
+                <p class="feature-desc">
+                  Daily, weekly, or monthly — set it and forget it. The agent
+                  automatically handles tasks when it's time, so you never have
+                  to worry about recurring work again.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.feature-layout-list -->
         </div>
       </section>
 
       <section class="section" id="waitlist">
-        <div class="waitlist">
-          <h2>Join the waitlist</h2>
-          <p class="section-copy">
-            This page is for demand validation. Join the waitlist if you want
-            early access and a chance to shape the product roadmap.
-          </p>
-          <form id="waitlist-form" novalidate>
-            <div class="waitlist-grid">
-              <div class="full">
-                <label for="email">Email address</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
-              <div class="full">
-                <button type="submit">Reserve my spot</button>
-              </div>
-            </div>
-            <p class="note">
-              We only collect your email for early access updates. No spam.
+        <div class="wrap">
+          <div class="final-cta">
+            <span class="agent-kicker" style="margin-bottom: 20px"
+              >Launching the beta in April</span
+            >
+            <h2 class="section-title">
+              Unlock Early Access to<br />AI Marketing Agent That Actually
+              Executes
+            </h2>
+            <p class="section-lead">
+              Join now for exclusive early beta access and get free extra
+              credits.
             </p>
-            <p class="message" id="form-message" aria-live="polite"></p>
-          </form>
+            <form class="waitlist" id="bottomWaitlist">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit">Join waitlist</button>
+              <div class="social-proof">
+                <div class="avatar-stack">
+                  <img
+                    src="https://api.dicebear.com/9.x/lorelei/svg?seed=Sarah"
+                    alt=""
+                  />
+                  <img
+                    src="https://api.dicebear.com/9.x/lorelei/svg?seed=James"
+                    alt=""
+                  />
+                  <img
+                    src="https://api.dicebear.com/9.x/lorelei/svg?seed=Mia"
+                    alt=""
+                  />
+                  <img
+                    src="https://api.dicebear.com/9.x/lorelei/svg?seed=Alex"
+                    alt=""
+                  />
+                  <img
+                    src="https://api.dicebear.com/9.x/lorelei/svg?seed=Yuna"
+                    alt=""
+                  />
+                </div>
+                <span>285 marketers already joined</span>
+              </div>
+            </form>
+            <div class="status" id="bottomStatus" style="display: none"></div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer wrap">
-      SignalScout - AI marketing research for category and competitor
-      intelligence.
+    <footer class="footer">
+      <div class="wrap">
+        2026 Baram Labs. All rights reserved.
+        <a href="mailto:support@baramlabs.com">Contact</a>
+      </div>
     </footer>
 
     <script>
-      const form = document.getElementById("waitlist-form");
-      const message = document.getElementById("form-message");
+      const API_URL =
+        "https://script.google.com/macros/s/AKfycbywLzXopHfvQxs0cp1ipVbdPTUge6Bf3f3k0jhLiOIf1TvPnlY8ToBi9D84dQzQHeyq/exec";
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
+      const waitlistForms = [
+        { form: "finalWaitlist", status: "finalStatus" },
+        { form: "midWaitlist", status: "midStatus" },
+        { form: "bottomWaitlist", status: "bottomStatus" },
+      ];
 
-        if (!form.checkValidity()) {
-          message.textContent = "Please enter a valid email address.";
-          message.style.color = "#b13a1e";
-          form.reportValidity();
-          return;
-        }
+      waitlistForms.forEach(({ form: formId, status: statusId }) => {
+        const form = document.getElementById(formId);
+        const statusDiv = document.getElementById(statusId);
+        if (!form || !statusDiv) return;
 
-        const formData = Object.fromEntries(new FormData(form).entries());
-        const key = "signalscout-waitlist";
-        const saved = JSON.parse(localStorage.getItem(key) || "[]");
-        saved.push({ ...formData, submittedAt: new Date().toISOString() });
-        localStorage.setItem(key, JSON.stringify(saved));
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
 
-        message.textContent =
-          "You are on the waitlist. We will reach out with early access details.";
-        message.style.color = "#165f54";
-        form.reset();
+          const email = form.querySelector('input[type="email"]').value.trim();
+
+          statusDiv.style.display = "block";
+          statusDiv.innerText = "Submitting...";
+          statusDiv.style.color = "#666";
+
+          try {
+            const formData = new FormData();
+            formData.append("email", email);
+
+            await fetch(API_URL, {
+              method: "POST",
+              body: formData,
+            });
+
+            statusDiv.innerText =
+              "You're on the waitlist 🚀 We'll notify you when beta opens.";
+            statusDiv.style.color = "green";
+            form.reset();
+          } catch (error) {
+            statusDiv.innerText = "Submission failed. Please try again.";
+            statusDiv.style.color = "red";
+          }
+        });
       });
     </script>
   </body>

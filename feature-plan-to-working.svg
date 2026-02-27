@@ -1,42 +1,48 @@
 <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
   <rect width="400" height="260" fill="#edf7f7" />
 
-  <!-- recurrence block -->
-  <rect x="52" y="46" width="122" height="168" rx="14" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
-  <rect x="52" y="46" width="122" height="34" rx="14" fill="#f0f4f8" />
-  <text x="113" y="67" fill="#4b5563" font-size="11" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.05em">PLAN</text>
+  <!-- === DAILY section === -->
+  <circle cx="26" cy="20" r="4" fill="#34d399" />
+  <text x="36" y="24" fill="#1d3557" font-size="10" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="0.05em">DAILY</text>
+  <line x1="20" y1="30" x2="380" y2="30" stroke="#dbe7ea" stroke-width="1" />
 
-  <!-- recurring calendar -->
-  <rect x="72" y="92" width="82" height="64" rx="10" fill="#ffffff" stroke="#dbe7ea" stroke-width="1.2" />
-  <rect x="72" y="92" width="82" height="22" rx="10" fill="#1d3557" />
-  <text x="113" y="107" fill="white" font-size="9" font-family="system-ui,sans-serif" font-weight="600" text-anchor="middle">RECURRING</text>
-  <text x="81" y="125" fill="#1d3557" font-size="8" font-family="system-ui,sans-serif" font-weight="700">DAILY</text>
-  <text x="81" y="137" fill="#64748b" font-size="8" font-family="system-ui,sans-serif" font-weight="700">WEEKLY</text>
-  <text x="81" y="149" fill="#64748b" font-size="8" font-family="system-ui,sans-serif" font-weight="700">MONTHLY</text>
-  <circle cx="130" cy="124" r="4" fill="#a8dadc" />
-  <circle cx="130" cy="136" r="4" fill="#a8dadc" />
-  <circle cx="130" cy="148" r="4" fill="#a8dadc" />
+  <!-- Task A -->
+  <rect x="20" y="35" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="46" r="4" fill="#a8dadc" />
+  <text x="44" y="50" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task A</text>
 
-  <rect x="73" y="166" width="80" height="26" rx="8" fill="#edf7f7" stroke="#a8dadc" stroke-width="1.2" />
-  <text x="113" y="183" fill="#0f766e" font-size="9" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.02em">AUTO RUN</text>
+  <!-- Task B -->
+  <rect x="20" y="61" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="72" r="4" fill="#a8dadc" />
+  <text x="44" y="76" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task B</text>
 
-  <!-- connection -->
-  <path d="M174 130 C195 115, 205 115, 220 130" stroke="#a8dadc" stroke-width="2.5" fill="none" stroke-linecap="round" />
-  <path d="M214 122 L223 130 L214 138" stroke="#a8dadc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M173 130 C170 130, 170 130, 168 130" stroke="#dbe7ea" stroke-width="2" fill="none" stroke-dasharray="2 4" />
+  <!-- Task C -->
+  <rect x="20" y="87" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="98" r="4" fill="#a8dadc" />
+  <text x="44" y="102" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task C</text>
 
-  <!-- working board -->
-  <rect x="226" y="46" width="122" height="168" rx="14" fill="white" stroke="#a8dadc" stroke-width="2" />
-  <rect x="226" y="46" width="122" height="34" rx="14" fill="#1d3557" />
-  <text x="287" y="67" fill="white" font-size="11" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.05em">WORKING</text>
+  <!-- === WEEKLY section === -->
+  <circle cx="26" cy="128" r="4" fill="#34d399" />
+  <text x="36" y="132" fill="#457b9d" font-size="10" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="0.05em">WEEKLY</text>
+  <line x1="20" y1="138" x2="380" y2="138" stroke="#dbe7ea" stroke-width="1" />
 
-  <rect x="246" y="92" width="84" height="52" rx="9" fill="#edf7f7" stroke="#a8dadc" stroke-width="1.2" />
-  <rect x="254" y="102" width="52" height="6" rx="3" fill="#a8dadc" />
-  <rect x="254" y="113" width="38" height="5" rx="2.5" fill="#a8dadc" fill-opacity="0.4" />
-  <rect x="254" y="126" width="68" height="4" rx="2" fill="#dbe7ea" />
-  <rect x="254" y="126" width="50" height="4" rx="2" fill="#1d3557" />
+  <!-- Task D -->
+  <rect x="20" y="143" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="154" r="4" fill="#457b9d" fill-opacity="0.5" />
+  <text x="44" y="158" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task D</text>
 
-  <rect x="246" y="154" width="84" height="28" rx="8" fill="#ffffff" stroke="#dbe7ea" stroke-width="1.2" />
-  <circle cx="255" cy="168" r="3.5" fill="#1d3557" />
-  <rect x="262" y="165" width="54" height="6" rx="3" fill="#f0f4f8" />
+  <!-- Task E -->
+  <rect x="20" y="169" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="180" r="4" fill="#457b9d" fill-opacity="0.5" />
+  <text x="44" y="184" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task E</text>
+
+  <!-- === MONTHLY section === -->
+  <circle cx="26" cy="210" r="4" fill="#34d399" />
+  <text x="36" y="214" fill="#64748b" font-size="10" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="0.05em">MONTHLY</text>
+  <line x1="20" y1="220" x2="380" y2="220" stroke="#dbe7ea" stroke-width="1" />
+
+  <!-- Task F -->
+  <rect x="20" y="225" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
+  <circle cx="34" cy="236" r="4" fill="#64748b" fill-opacity="0.4" />
+  <text x="44" y="240" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task F</text>
 </svg>
