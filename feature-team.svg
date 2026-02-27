@@ -11,10 +11,16 @@
   <rect x="76" y="24" width="52" height="12" rx="6" fill="#a8dadc" />
   <text x="102" y="32.5" fill="#1d3557" font-size="7" font-family="system-ui,sans-serif" font-weight="600" text-anchor="middle">Planning</text>
   <!-- Assignee avatars in header -->
-  <circle cx="304" cy="30" r="8" fill="#a8dadc" />
-  <text x="304" y="33" fill="white" font-size="7" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">A</text>
-  <circle cx="322" cy="30" r="8" fill="#e07a5f" />
-  <text x="322" y="33" fill="white" font-size="7" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">B</text>
+  <g>
+    <circle cx="304" cy="30" r="8" fill="#a8dadc" />
+    <circle cx="304" cy="27" r="3" fill="white" />
+    <path d="M298 35a6 6 0 0 1 12 0" fill="white" />
+  </g>
+  <g>
+    <circle cx="322" cy="30" r="8" fill="#e07a5f" />
+    <circle cx="322" cy="27" r="3" fill="white" />
+    <path d="M316 35a6 6 0 0 1 12 0" fill="white" />
+  </g>
 
   <!-- Skeleton title -->
   <rect x="76" y="54" width="140" height="8" rx="4" fill="#dbe7ea" />
@@ -32,13 +38,19 @@
   <text x="76" y="142" fill="#90a4ae" font-size="7" font-family="system-ui,sans-serif" font-weight="600">COMMENTS</text>
 
   <!-- User A comment -->
-  <circle cx="84" cy="164" r="10" fill="#a8dadc" />
-  <text x="84" y="167" fill="white" font-size="8" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">A</text>
+  <g>
+    <circle cx="84" cy="164" r="10" fill="#a8dadc" />
+    <circle cx="84" cy="160.5" r="3.8" fill="white" />
+    <path d="M76.5 170.5a7.5 7.5 0 0 1 15 0" fill="white" />
+  </g>
   <text x="102" y="167.5" fill="#3d5a6e" font-size="10" font-family="system-ui,sans-serif" font-weight="500">Consider target audience</text>
 
   <!-- User B comment -->
-  <circle cx="84" cy="194" r="10" fill="#e07a5f" />
-  <text x="84" y="197" fill="white" font-size="8" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">B</text>
+  <g>
+    <circle cx="84" cy="194" r="10" fill="#e07a5f" />
+    <circle cx="84" cy="190.5" r="3.8" fill="white" />
+    <path d="M76.5 200.5a7.5 7.5 0 0 1 15 0" fill="white" />
+  </g>
   <text x="102" y="197.5" fill="#3d5a6e" font-size="10" font-family="system-ui,sans-serif" font-weight="500">Refer the last month report</text>
 
   <!-- Comment input area -->

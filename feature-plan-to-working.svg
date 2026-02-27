@@ -9,17 +9,17 @@
   <!-- Task A -->
   <rect x="20" y="35" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="46" r="4" fill="#a8dadc" />
-  <text x="44" y="50" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task A</text>
+  <text x="44" y="50" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Write today's app push message.</text>
 
   <!-- Task B -->
   <rect x="20" y="61" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="72" r="4" fill="#a8dadc" />
-  <text x="44" y="76" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task B</text>
+  <text x="44" y="76" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Review customer feedback</text>
 
   <!-- Task C -->
   <rect x="20" y="87" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="98" r="4" fill="#a8dadc" />
-  <text x="44" y="102" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task C</text>
+  <text x="44" y="102" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Review Metrics</text>
 
   <!-- === WEEKLY section === -->
   <circle cx="26" cy="128" r="4" fill="#34d399" />
@@ -29,12 +29,12 @@
   <!-- Task D -->
   <rect x="20" y="143" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="154" r="4" fill="#457b9d" fill-opacity="0.5" />
-  <text x="44" y="158" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task D</text>
+  <text x="44" y="158" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Plan Social Content</text>
 
   <!-- Task E -->
   <rect x="20" y="169" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="180" r="4" fill="#457b9d" fill-opacity="0.5" />
-  <text x="44" y="184" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task E</text>
+  <text x="44" y="184" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Check competitors' content</text>
 
   <!-- === MONTHLY section === -->
   <circle cx="26" cy="210" r="4" fill="#34d399" />
@@ -44,5 +44,5 @@
   <!-- Task F -->
   <rect x="20" y="225" width="360" height="22" rx="7" fill="white" stroke="#dbe7ea" stroke-width="1.2" />
   <circle cx="34" cy="236" r="4" fill="#64748b" fill-opacity="0.4" />
-  <text x="44" y="240" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Task F</text>
+  <text x="44" y="240" fill="#1d3557" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Growth Planning</text>
 </svg>

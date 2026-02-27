@@ -1,0 +1,62 @@
+<svg width="700" height="400" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="350" height="400" />
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="350" y="0" width="350" height="400" />
+    </clipPath>
+  </defs>
+
+  <!-- Two background halves -->
+  <rect x="0" y="0" width="350" height="400" fill="#F8FCFD" />
+  <rect x="350" y="0" width="350" height="400" fill="#EDF5F7" />
+
+  <!-- Soft decorative circles -->
+  <circle cx="60" cy="60" r="100" fill="white" fill-opacity="0.5" />
+  <circle cx="640" cy="340" r="110" fill="#DCEEF3" fill-opacity="0.45" />
+
+  <!-- Left: Written content doc -->
+  <g clip-path="url(#leftHalf)">
+    <g transform="translate(60 40)">
+      <rect width="230" height="320" rx="16" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+      <!-- title line -->
+      <rect x="24" y="30" width="120" height="10" rx="5" fill="#1d3557" fill-opacity="0.15" />
+      <!-- text lines -->
+      <rect x="24" y="56" width="170" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="74" width="150" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="92" width="160" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="116" width="170" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="134" width="120" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="158" width="160" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="176" width="140" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="200" width="170" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="218" width="130" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="242" width="150" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="260" width="110" height="8" rx="4" fill="#dbe7ea" />
+      <rect x="24" y="284" width="100" height="8" rx="4" fill="#dbe7ea" />
+    </g>
+  </g>
+
+  <!-- Right: Charts doc -->
+  <g clip-path="url(#rightHalf)">
+    <g transform="translate(410 40)">
+      <rect width="230" height="320" rx="16" fill="white" stroke="#dbe7ea" stroke-width="1.5" />
+
+      <!-- line chart (top half) -->
+      <polyline points="28,130 60,105 92,112 124,80 156,68 196,48" stroke="#457b9d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <circle cx="28" cy="130" r="4" fill="#457b9d" />
+      <circle cx="60" cy="105" r="4" fill="#457b9d" />
+      <circle cx="92" cy="112" r="4" fill="#457b9d" />
+      <circle cx="124" cy="80" r="4" fill="#457b9d" />
+      <circle cx="156" cy="68" r="4" fill="#457b9d" />
+      <circle cx="196" cy="48" r="4" fill="#457b9d" />
+      <line x1="28" y1="150" x2="196" y2="150" stroke="#dbe7ea" stroke-width="1.5" />
+
+      <!-- pie chart (bottom half) -->
+      <circle cx="115" cy="236" r="60" fill="#a8dadc" />
+      <path d="M115 236 L115 176 A60 60 0 0 1 166.9 208.8 Z" fill="#457b9d" />
+      <path d="M115 236 L166.9 208.8 A60 60 0 0 1 145.7 287.2 Z" fill="#1d3557" fill-opacity="0.3" />
+    </g>
+  </g>
+</svg>

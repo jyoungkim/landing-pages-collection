@@ -32,10 +32,9 @@
     <circle cx="62" cy="46" r="2" fill="#457b9d" />
     <circle cx="78" cy="40" r="2" fill="#457b9d" />
     <circle cx="96" cy="30" r="2" fill="#457b9d" />
-    <line x1="14" y1="76" x2="96" y2="76" stroke="#dbe7ea" stroke-width="1" />
+    <line x1="14" y1="85" x2="96" y2="85" stroke="#dbe7ea" stroke-width="1" />
 
-    <!-- divider -->
-    <line x1="14" y1="90" x2="96" y2="90" stroke="#dbe7ea" stroke-width="0.8" stroke-dasharray="3 2" />
+    
 
     <!-- pie chart (bottom half: y 92–180) -->
     <circle cx="55" cy="136" r="34" fill="#a8dadc" />
